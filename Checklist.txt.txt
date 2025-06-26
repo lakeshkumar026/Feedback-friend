@@ -1,0 +1,76 @@
+📝 Cybersecurity Project - Security Checklist
+
+Project: Feedback-friend  
+Intern: Lakesh Kumar(DHC-1390)
+Date: 26 June 2025  
+
+------------------------------------------------
+✅ Week 1: Initial Setup & Vulnerability Testing
+------------------------------------------------
+☑️ Application setup and deployment (http://localhost:3000)
+☑️ Reviewed user functions: signup, login, profile
+
+☑️ Cross-Site Scripting (XSS) Test:
+   → Injected <script>alert('XSS');</script>
+   → ✅ Vulnerable (alert displayed)
+
+☑️ SQL Injection Test:
+   → Used input: admin' OR '1'='1
+   → ✅ Login bypassed
+
+☑️ Automated Vulnerability Scan (OWASP ZAP):
+   → Found insecure headers, missing input validation, plain-text password storage
+
+☑️ Weak password handling confirmed (no encryption)
+
+------------------------------------------------
+✅ Week 2: Implemented Security Enhancements
+------------------------------------------------
+☑️ Input Validation:
+   → Used validator.js to sanitize all inputs
+
+☑️ Password Hashing:
+   → Applied bcrypt hashing with salting
+
+☑️ Token-Based Authentication:
+   → Integrated JSON Web Tokens (JWT) for secure, stateless sessions
+
+☑️ HTTP Security Headers:
+   → Added Content-Security-Policy, X-Frame-Options, etc.
+
+☑️ Post-Testing:
+   → XSS & SQL Injection attacks failed
+   → Core features (signup/login) worked normally
+
+------------------------------------------------
+✅ Week 3: Advanced Security & Final Review
+------------------------------------------------
+☑️ Penetration Testing:
+   → Used Nmap to scan localhost
+   → ✅ No unexpected open ports found
+
+☑️ Logging:
+   → Integrated Winston logger
+   → Captures auth attempts and errors
+
+☑️ Final Security Checklist:
+   ☐ Input validation  
+   ☐ Secure password hashing  
+   ☐ HTTPS enabled  
+   ☐ Proper logging  
+   ☐ Use of security headers  
+   ☐ Token-based authentication  
+
+☑️ Final Application Testing:
+   → All known attacks blocked (XSS, SQLi)
+   → HTTPS and headers active
+   → Data encrypted
+   → Authentication secure and logged
+
+------------------------------------------------
+🔗 GitHub Repository:
+https://github.com/lakeshkumar026/Feedback-friend
+🎓 Outcome:
+→ Gained hands-on experience in identifying and fixing web app vulnerabilities  
+→ Implemented standard protections: validator.js, bcrypt, JWT, helmet  
+→ Successfully prepared app for real-world security readiness
